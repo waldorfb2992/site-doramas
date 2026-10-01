@@ -1,0 +1,95 @@
+@media (max-width: 768px) {
+
+    .site-header {
+        height: auto;
+
+        padding: 15px 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .site-nav {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .site-nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 150px 30px 80px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+
+        transform: none;
+    }
+
+    .mini-title {
+        position: static;
+
+        transform: none;
+
+        width: auto;
+
+        text-align: left;
+
+        margin-bottom: 20px;
+    }
+
+    .section {
+        padding: 80px 20px;
+    }
+
+    .drama-page {
+        padding-top: 105px;
+    }
+
+    .drama-section {
+        padding: 80px 25px;
+
+        flex-direction: column;
+
+        gap: 50px;
+    }
+
+    .drama-image {
+        width: 90%;
+    }
+
+    .drama-text {
+        text-align: center;
+    }
+
+    .line {
+        margin: 25px auto;
+    }
+
+    .details {
+        justify-content: center;
+
+        gap: 25px;
+
+        flex-wrap: wrap;
+    }
+
+    .tangerines .drama-image {
+        order: -1;
+    }
+
+    .poster-slider {
+        height: 420px;
+    }
+
+    .poster-track img {
+        width: 260px;
+        height: 380px;
+    }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Doramas | My Drama Diary</title>
+
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/dramas.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="logo">my drama diary</div>
+
+        <nav class="site-nav">
+            <a href="../index.html#inicio">Início</a>
+            <a href="../index.html#doramas">Doramas</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="ost.html">OST do dia</a>
+
+            <button
+                class="theme-toggle"
+                type="button"
+                aria-label="Ativar modo escuro"
+                aria-pressed="false"
+            >
+                <span aria-hidden="true">☾</span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="dramas-page">
+
+        <section class="dramas-intro">
+            <p class="dramas-small">✦ our drama library ✦</p>
+
+            <h1>Todos os doramas</h1>
+
+            <p>
+                Essa página é montada automaticamente usando a mesma lista
+                que alimenta o quiz.
+            </p>
+        </section>
+
+        <section class="dramas-list-section">
+            <div class="dramas-grid" id="dramas-grid"></div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="logo">my drama diary</div>
+
+        <p>
+            feito para quem encontra um pedacinho de si
+            em cada história.
+        </p>
+
+        <small>© 2026 My Drama Diary</small>
+    </footer>
+
+    <script src="../theme.js"></script>
+    <script src="../data/drama.js"></script>
+
+    <script>
+        const dramasGrid = document.querySelector('#dramas-grid');
+
+        window.DRAMAS.forEach((drama) => {
+            const genres = drama.genres
+                .map((genre) => genre.charAt(0).toUpperCase() + genre.slice(1))
+                .join(' · ');
+
+            const card = document.createElement('article');
+            card.className = 'library-card';
+
+            card.innerHTML = `
+                <a class="library-poster" href="${drama.page}">
+                    <img src="${drama.poster}" alt="Pôster de ${drama.title}">
+                </a>
+
+                <div class="library-info">
+                    <span class="library-type">
+                        ${drama.type} · ${drama.year}
+                    </span>
+
+                    <h2>${drama.title}</h2>
+
+                    <p class="library-genres">${genres}</p>
+
+                    <p>${drama.description}</p>
+
+                    <a class="library-link" href="${drama.page}">
+                        conhecer dorama →
+                    </a>
+                </div>
+            `;
+
+            dramasGrid.appendChild(card);
+        });
+    </script>
+
+</body>
+
+</html>

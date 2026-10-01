@@ -1,0 +1,70 @@
+.drama-container {
+    display: flex;
+    justify-content: center;
+
+    gap: 45px;
+
+    flex-wrap: wrap;
+}
+
+.drama-card {
+    width: 340px;
+
+    background: var(--card-background);
+
+    border: 1px solid var(--card-border);
+
+    text-align: left;
+
+    transition: 0.4s;
+}
+
+.drama-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow: 0 15px 40px rgba(75, 57, 48, 0.15);
+}
+
+.drama-card img {
+    width: 100%;
+    height: 460px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.drama-info {
+    padding: 30px;
+}
+
+.tag {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: #a77f72;
+}
+
+.drama-info h3 {
+    font-size: 28px;
+    font-weight: normal;
+
+    margin: 12px 0;
+}
+
+.drama-info p {
+    color: var(--muted-text);
+
+    line-height: 1.7;
+
+    font-size: 15px;
+
+    margin-bottom: 20px;
+}
+
+.drama-info a {
+    color: #8e665b;
+    text-decoration: none;
+    font-size: 14px;
+}

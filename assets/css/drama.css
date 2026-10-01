@@ -1,0 +1,137 @@
+.drama-page {
+    padding-top: 75px;
+}
+
+.drama-section {
+    min-height: calc(100vh - 75px);
+
+    padding: 120px 12%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 90px;
+}
+
+.frost {
+    background: #eee9e6;
+}
+
+.tangerines {
+    background: #f3e4d5;
+}
+
+:root[data-theme="dark"] .frost {
+    background: #302a2a;
+}
+
+:root[data-theme="dark"] .tangerines {
+    background: #3a2d27;
+}
+
+.drama-image {
+    width: 40%;
+}
+
+.drama-image img {
+    width: 100%;
+    max-height: 650px;
+
+    object-fit: cover;
+
+    box-shadow: 20px 20px 0 rgba(255, 255, 255, 0.5);
+}
+
+.drama-text {
+    flex: 1;
+}
+
+.drama-text > span {
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: #9b7569;
+}
+
+.drama-text h1,
+.drama-text h2 {
+    font-size: clamp(40px, 5vw, 65px);
+    font-weight: normal;
+    line-height: 1.1;
+
+    margin: 20px 0;
+}
+
+.line {
+    width: 60px;
+    height: 1px;
+
+    background: #9b7569;
+
+    margin: 25px 0;
+}
+
+.drama-text p {
+    max-width: 600px;
+
+    line-height: 1.9;
+
+    color: var(--muted-text);
+
+    margin-bottom: 18px;
+}
+
+.details {
+    display: flex;
+    gap: 45px;
+
+    margin-top: 35px;
+}
+
+.details div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.details strong {
+    font-size: 11px;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    color: #92766b;
+}
+
+.details span {
+    font-size: 15px;
+}
+
+.back-link {
+    display: inline-block;
+
+    margin-top: 40px;
+
+    color: #8e665b;
+
+    text-decoration: none;
+}
+
+.quote {
+    padding: 130px 20px;
+
+    text-align: center;
+
+    background: var(--quote-background);
+}
+
+.quote p {
+    font-size: clamp(28px, 4vw, 48px);
+
+    font-style: italic;
+    line-height: 1.5;
+
+    color: #786761;
+}

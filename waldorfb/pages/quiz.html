@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz | My Drama Diary</title>
+
+    <link rel="stylesheet" href="../assets/css/main.css">
+
+    <link rel="stylesheet" href="quiz.css">
+
+</head>
+
+<body>
+
+    <!-- =========================
+         MENU
+    ========================= -->
+
+    <header>
+
+        <div class="logo">
+            my drama diary
+        </div>
+
+        <nav>
+
+            <a href="../index.html#inicio">
+                Início
+            </a>
+
+            <a href="dramas.html">
+                Doramas
+            </a>
+
+            <a href="quiz.html">
+                Quiz
+            </a>
+
+            <a href="ost.html">
+                OST do dia
+            </a>
+
+            <button class="theme-toggle" id="theme-toggle">
+                ☾
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         QUIZ
+    ========================= -->
+
+    <main class="quiz-page">
+
+        <div class="quiz-wrapper">
+
+            <div class="quiz-intro">
+
+                <p class="quiz-mini-title">
+                    ✦ find your next drama ✦
+                </p>
+
+                <h1>
+                    Qual dorama<br>
+                    combina com você?
+                </h1>
+
+                <p class="quiz-description">
+                    Responda algumas perguntinhas e descubra
+                    qual história combina com o seu gosto.
+                </p>
+
+            </div>
+
+
+            <!-- PERGUNTA 1 -->
+
+            <section class="question active">
+
+                <span class="question-number">
+                    01
+                </span>
+
+                <h2>
+                    Qual o gênero que você mais gosta?
+                </h2>
+
+                <div class="options">
+
+                    <button class="option" data-value="romance">
+                        Romance
+                    </button>
+
+                    <button class="option" data-value="drama">
+                        Drama
+                    </button>
+
+                    <button class="option" data-value="comedia">
+                        Comédia
+                    </button>
+
+                    <button class="option" data-value="fantasia">
+                        Fantasia
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- PERGUNTA 2 -->
+
+            <section class="question">
+
+                <span class="question-number">
+                    02
+                </span>
+
+                <h2>
+                    Que tipo de personagem você acha mais interessante?
+                </h2>
+
+                <div class="options">
+
+                    <button class="option" data-value="determinado">
+                        Protagonista determinado com grandes objetivos
+                    </button>
+
+                    <button class="option" data-value="amigo">
+                        Amigo leal que dá suporte incondicional
+                    </button>
+
+                    <button class="option" data-value="vilao">
+                        Vilão intrigante com sentimentos complexos
+                    </button>
+
+                    <button class="option" data-value="herdeiro">
+                        Herdeiro em conflito com o próprio destino
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- PERGUNTA 3 -->
+
+            <section class="question">
+
+                <span class="question-number">
+                    03
+                </span>
+
+                <h2>
+                    Que tipo de final seu dorama terá?
+                </h2>
+
+                <div class="options">
+
+                    <button class="option" data-value="feliz">
+                        Um final feliz, onde todos encontram paz
+                    </button>
+
+                    <button class="option" data-value="inesperado">
+                        Um final inesperado que surpreende
+                    </button>
+
+                    <button class="option" data-value="tragico">
+                        Um final trágico, onde sacrifícios serão feitos
+                    </button>
+
+                    <button class="option" data-value="aberto">
+                        Um final aberto, deixando espaço para interpretações
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- RESULTADO -->
+
+            <section class="result">
+
+                <p class="result-small">
+                    ✦ seu dorama ideal é ✦
+                </p>
+
+                <img
+                    id="drama-poster"
+                    class="quiz-result-poster"
+                    src=""
+                    alt=""
+                >
+
+                <h2 id="drama-title"></h2>
+
+                <p id="drama-year" class="quiz-result-year"></p>
+
+                <button id="restart">
+                    fazer o quiz novamente
+                </button>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <div class="logo">
+            my drama diary
+        </div>
+
+        <p>
+            feito para quem encontra um pedacinho de si em cada história.
+        </p>
+
+        <small>
+            © 2026 My Drama Diary
+        </small>
+
+    </footer>
+
+
+    <script src="../theme.js"></script>
+
+    <script src="../data/drama.js"></script>
+
+    <script src="quiz.js"></script>
+
+</body>
+
+</html>

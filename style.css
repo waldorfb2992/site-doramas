@@ -1,0 +1,822 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #f8f3ef;
+    color: #453d3a;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    background: rgba(248, 243, 239, 0.94);
+
+    border-bottom: 1px solid #ded3cc;
+
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-style: italic;
+    color: #6f625c;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #655a55;
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #a77f72;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    padding: 120px 10%;
+
+    overflow: hidden;
+
+    background: #802f29;
+}
+
+
+/* =========================
+   POSTERS PASSANDO AO FUNDO
+========================= */
+
+.poster-slider {
+    position: absolute;
+
+    top: 50%;
+    left: 0;
+
+    width: 100%;
+    height: 500px;
+
+    transform: translateY(-50%);
+
+    overflow: hidden;
+
+    z-index: 1;
+
+    opacity: 0.65;
+}
+
+.poster-track {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    width: max-content;
+    height: 100%;
+
+    animation: slidePosters 25s linear infinite;
+}
+
+.poster-track img {
+    width: 320px;
+    height: 460px;
+
+    object-fit: cover;
+
+    flex-shrink: 0;
+
+    border-radius: 8px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================
+   MOVIMENTO DOS POSTERS
+========================= */
+
+@keyframes slidePosters {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+
+/* =========================
+   TEXTO DO HERO
+========================= */
+
+.hero-content {
+    position: relative;
+
+    z-index: 5;
+
+    max-width: 600px;
+
+    color: rgb(0, 0, 0);
+}
+
+
+/* WELCOME CENTRALIZADO NA TELA */
+
+.mini-title {
+    position: absolute;
+    top: -45px;
+    left: 40vw;
+    transform: translateX(-50%);
+    width: 100vw;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin: 0;
+    z-index: 10;
+}
+
+
+.hero h1 {
+    font-size: clamp(42px, 6.5vw, 78px);
+    font-weight: normal;
+    line-height: 1.05;
+    margin-bottom: 25px;
+
+    transform: translateX(-30px);
+}
+
+
+.hero-content > p:not(.mini-title) {
+    max-width: 480px;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    margin-bottom: 35px;
+}
+
+
+.button {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    background: #f5e8df;
+
+    color: #5d504a;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    transition: 0.3s;
+}
+
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   SEÇÕES
+========================= */
+
+.section {
+    padding: 120px 10%;
+    text-align: center;
+}
+
+.section-small {
+    color: #a77f72;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.section h2 {
+    font-size: 45px;
+    font-weight: normal;
+    margin: 15px 0 60px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.drama-container {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 45px;
+
+    flex-wrap: wrap;
+}
+
+.drama-card {
+    width: 340px;
+
+    background: #fffaf7;
+
+    border: 1px solid #e4d9d2;
+
+    text-align: left;
+
+    transition: 0.4s;
+}
+
+.drama-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 15px 40px rgba(75, 57, 48, 0.15);
+}
+
+.drama-card img {
+    width: 100%;
+    height: 460px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.drama-info {
+    padding: 30px;
+}
+
+.tag {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: #a77f72;
+}
+
+.drama-info h3 {
+    font-size: 28px;
+    font-weight: normal;
+
+    margin: 12px 0;
+}
+
+.drama-info p {
+    color: #667175;
+
+    line-height: 1.7;
+
+    font-size: 15px;
+
+    margin-bottom: 20px;
+}
+
+.drama-info a {
+    color: #8e665b;
+
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   PÁGINAS DOS DORAMAS
+========================= */
+
+.drama-section {
+    min-height: 100vh;
+
+    padding: 120px 12%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 90px;
+}
+
+.frost {
+    background: #eee9e6;
+}
+
+.tangerines {
+    background: #f3e4d5;
+}
+
+.drama-image {
+    width: 40%;
+}
+
+.drama-image img {
+    width: 100%;
+
+    max-height: 650px;
+
+    object-fit: cover;
+
+    box-shadow:
+        20px 20px 0 rgba(255, 255, 255, 0.5);
+}
+
+.drama-text {
+    flex: 1;
+}
+
+.drama-text > span {
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: #9b7569;
+}
+
+.drama-text h2 {
+    font-size: clamp(40px, 5vw, 65px);
+
+    font-weight: normal;
+
+    line-height: 1.1;
+
+    margin: 20px 0;
+}
+
+.line {
+    width: 60px;
+    height: 1px;
+
+    background: #9b7569;
+
+    margin: 25px 0;
+}
+
+.drama-text p {
+    max-width: 600px;
+
+    line-height: 1.9;
+
+    color: #665d58;
+
+    margin-bottom: 18px;
+}
+
+.details {
+    display: flex;
+
+    gap: 45px;
+
+    margin-top: 35px;
+}
+
+.details div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.details strong {
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    color: #92766b;
+}
+
+.details span {
+    font-size: 15px;
+}
+
+
+/* =========================
+   QUIZ
+========================= */
+
+.quiz-section {
+    padding: 120px 10%;
+
+    text-align: center;
+
+    background: #f1e8e2;
+}
+
+.quiz-container {
+    width: 90%;
+
+    max-width: 800px;
+
+    margin: 0 auto;
+}
+
+
+/* CABEÇALHO DO QUIZ */
+
+.quiz-header {
+    margin-bottom: 50px;
+}
+
+.quiz-header h2 {
+    font-size: 45px;
+
+    font-weight: normal;
+
+    margin: 15px 0 20px;
+}
+
+.quiz-header p:last-child {
+    max-width: 550px;
+
+    margin: 0 auto;
+
+    color: #6d625d;
+
+    line-height: 1.7;
+
+    font-size: 16px;
+}
+
+
+/* PERGUNTAS */
+
+.question {
+    display: none;
+}
+
+.question.active {
+    display: block;
+}
+
+.question h3 {
+    font-size: 22px;
+
+    font-weight: normal;
+
+    line-height: 1.5;
+
+    margin-bottom: 35px;
+}
+
+
+/* ALTERNATIVAS */
+
+.options {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+.option {
+    min-height: 75px;
+
+    padding: 20px;
+
+    border: 1px solid #d7c6bd;
+
+    border-radius: 12px;
+
+    background: #fffaf7;
+
+    color: #514743;
+
+    font-family: Georgia, 'Times New Roman', serif;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.option:hover {
+    background: #e9dcd4;
+
+    border-color: #b99b8e;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(75, 57, 48, 0.08);
+}
+
+
+/* =========================
+   RESULTADO DO QUIZ
+========================= */
+
+.result {
+    display: none;
+
+    padding: 30px 10px;
+}
+
+.result.show {
+    display: block;
+}
+
+.result-small {
+    color: #a77f72;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 15px;
+}
+
+.result h3 {
+    font-size: 35px;
+
+    font-weight: normal;
+
+    margin-bottom: 20px;
+
+    color: #453d3a;
+}
+
+.result > p:not(.result-small) {
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    color: #665d58;
+
+    line-height: 1.8;
+
+    font-size: 16px;
+}
+
+
+/* BOTÃO PARA CONHECER O DORAMA */
+
+.quiz-result-button {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 14px 28px;
+
+    background: #8e665b;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.quiz-result-button:hover {
+    background: #76534a;
+
+    transform: translateY(-3px);
+}
+
+
+/* BOTÃO REFAZER */
+
+#restart {
+    margin-top: 15px;
+
+    padding: 10px 22px;
+
+    border: 1px solid #c9b4aa;
+
+    border-radius: 20px;
+
+    background: transparent;
+
+    color: #765f57;
+
+    font-family: Georgia, 'Times New Roman', serif;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#restart:hover {
+    background: #e7d9d1;
+}
+
+
+/* =========================
+   FRASE
+========================= */
+
+.quote {
+    padding: 130px 20px;
+
+    text-align: center;
+
+    background: #faf7f4;
+}
+
+.quote p {
+    font-size: clamp(28px, 4vw, 48px);
+
+    font-style: italic;
+
+    line-height: 1.5;
+
+    color: #786761;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 60px 20px;
+
+    text-align: center;
+
+    background: #4d4642;
+
+    color: #eee6e1;
+}
+
+footer .logo {
+    color: white;
+
+    margin-bottom: 15px;
+}
+
+footer p {
+    margin-bottom: 20px;
+
+    font-size: 14px;
+}
+
+footer small {
+    color: #cfc3bc;
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        height: auto;
+
+        padding: 15px 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    nav {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 130px 30px 80px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .section {
+        padding: 80px 20px;
+    }
+
+    .drama-section {
+        padding: 80px 25px;
+
+        flex-direction: column;
+
+        gap: 50px;
+    }
+
+    .drama-image {
+        width: 90%;
+    }
+
+    .drama-text {
+        text-align: center;
+    }
+
+    .line {
+        margin: 25px auto;
+    }
+
+    .details {
+        justify-content: center;
+
+        gap: 25px;
+
+        flex-wrap: wrap;
+    }
+
+    .tangerines .drama-image {
+        order: -1;
+    }
+
+
+    /* QUIZ NO CELULAR */
+
+    .quiz-section {
+        padding: 80px 20px;
+    }
+
+    .quiz-container {
+        width: 100%;
+    }
+
+    .quiz-header h2 {
+        font-size: 34px;
+    }
+
+    .question h3 {
+        font-size: 19px;
+    }
+
+    .options {
+        grid-template-columns: 1fr;
+    }
+
+    .option {
+        min-height: 65px;
+
+        padding: 17px;
+    }
+
+    .result h3 {
+        font-size: 28px;
+    }
+
+}

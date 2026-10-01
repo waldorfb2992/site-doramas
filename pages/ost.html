@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OST do dia | My Drama Diary</title>
+
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="logo">my drama diary</div>
+
+        <nav class="site-nav">
+            <a href="../index.html#inicio">Início</a>
+            <a href="../index.html#doramas">Doramas</a>
+            <a href="quiz.html#quiz">Quiz</a>
+            <a href="ost.html">OST do dia</a>
+            <button class="theme-toggle" type="button" aria-label="Ativar modo escuro" aria-pressed="false">
+                <span aria-hidden="true">☾</span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="ost-page">
+        <section class="ost-player" aria-labelledby="ost-title">
+            <div class="ost-cover-wrap">
+                <img class="ost-cover" src="" alt="Capa da OST">
+                <div class="ost-disc" aria-hidden="true"></div>
+            </div>
+
+            <div class="ost-content">
+                <p class="section-small">✦ trilha sonora do dia ✦</p>
+                <p class="ost-status">uma escolha aleatória para acompanhar seu momento</p>
+                <h1 id="ost-title">Carregando...</h1>
+                <p class="ost-drama"></p>
+                <p class="ost-description"></p>
+
+                <div class="ost-actions">
+                    <button class="ost-play" type="button" aria-label="Dar play na OST">
+                        <span aria-hidden="true">▶</span>
+                        <span>dar play</span>
+                    </button>
+                    <button class="ost-next" type="button">outra OST</button>
+                </div>
+
+                <div class="ost-video" aria-hidden="true"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="logo">my drama diary</div>
+        <p>feito para quem encontra um pedacinho de si em cada história.</p>
+        <small>© 2026 My Drama Diary</small>
+    </footer>
+
+    <script src="../theme.js"></script>
+    <script src="../ost.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+</body>
+</html>
